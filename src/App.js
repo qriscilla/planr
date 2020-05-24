@@ -1,31 +1,18 @@
 import React from 'react';
-import Navbar from './components/layout/Navbar';
-import Month from './components/calendar/Month';
+import './App.css';
+import LogIn from './components/auth/LogIn';
 
 // Style
 const app = {
-  margin: '20px'
-}
-const navbar = {
-  height: '4vh'
-}
-const main = {
-  minHeight: 'calc(100vh - 4vh)',
-  border: '2px solid black'
+  minHeight: '100vh',
+  margin: '0',
+  backgroundImage: 'linear-gradient(to bottom right, #818E9B, #EBCEB4)'
 }
 
 function App() {
   return (
     <div style={app}>
-
-      <div style={navbar}>
-        <Navbar />        
-      </div>
-
-      <div style={main}>
-        <Month />        
-      </div>
-
+      <LogIn />
     </div>
   );
 }
