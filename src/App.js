@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import LogIn from './components/auth/LogIn';
 import SignUp from './components/auth/SignUp';
 import Home from './components/pages/Home';
+import Configure from './components/pages/Configure';
+import About from './components/pages/About';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path='/login' component={LogIn} />
           <Route path='/signup' component={SignUp} />
           <Route path='/home' component={Home} />
+          <Route path='/configure' component={Configure} />
+          <Route path='/about' component={About} />
         </Switch>
       </div>      
     </Router>

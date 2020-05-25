@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
         <div className='footer'>
-            About planr.
+            <Link className='footer_link'>About planr.</Link>
         </div>
     );
 }

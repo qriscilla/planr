@@ -1,9 +1,9 @@
+/* Entire */
 .app {
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     background-image: linear-gradient(to bottom right, #818E9B, #EBCEB4);
 }
-
 .input::-webkit-input-placeholder {
     font-size: 18px;
     font-weight: 500;
@@ -12,12 +12,10 @@
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
-    padding: 10px 30px 10px 10px;
+    padding: 10px 20px 10px 10px;
 }
 .navbar_svg {
     width: 100px;
@@ -32,27 +30,33 @@
     text-decoration: none;
 }
 .navbar_link:hover {
-    border-bottom: 2px solid white;
-    margin-bottom: -2px;
+    border-bottom: 3px solid white;
+    margin-bottom: -3px;
 }
 
 /* Home */
 .home {
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .home_buckets {
     display: flex;
     overflow-x: auto;
-    margin-right: 10px;
+}
+.home_buckets::-webkit-scrollbar {
+    display: none;
 }
 .home_bucket {
-    min-width: 350px;
+    min-width: 340px;
+    margin-left: 10px;
     margin-left: 10px;
     background-color: rgb(250,250,250,0.2);
-    height: calc(100vh - 25vh);
+    min-height: calc(100vh - 25vh);
 }
 .home_title {
     text-align: center;
@@ -62,15 +66,33 @@
     padding-bottom: 5px;
     background-color: rgb(250,250,250,0.2);
 }
-.home_buckets::-webkit-scrollbar {
-    display: none;
+.home_ul {
+    list-style-type: none;
+}
+.home_ul li {
+    /* margin-left: -10px; */
+    line-height: 50px;
+}
+.home_span {
+    background-color: rgb(250,250,250,0.2);
+    border-radius: 13px;
+    padding: 7px;
+    cursor: grab;
 }
 
 /* Footer  */
 .footer {
-    float: right;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+.footer_link {
     color: white;
     font-weight: bold;
-    margin-right: 30px;
-    margin-top: 20px;
+    text-decoration: none;
+}
+.footer_link:hover {
+    border-bottom: 3px solid white;
+    margin-bottom: -3px;
 }
