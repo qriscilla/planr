@@ -37,10 +37,22 @@
 }
 
 /* Home */
+.home {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_buckets {
+    display: flex;
+    overflow-x: auto;
+    margin-right: 10px;
+}
 .home_bucket {
+    min-width: 350px;
+    margin-left: 10px;
     background-color: rgb(250,250,250,0.2);
-    height: calc(100vh - 20vh);
-    margin-right: 20px;
+    height: calc(100vh - 25vh);
 }
 .home_title {
     text-align: center;
@@ -50,6 +62,9 @@
     padding-bottom: 5px;
     background-color: rgb(250,250,250,0.2);
 }
+.home_buckets::-webkit-scrollbar {
+    display: none;
+}
 
 /* Footer  */
 .footer {
@@ -57,4 +72,5 @@
     color: white;
     font-weight: bold;
     margin-right: 30px;
+    margin-top: 20px;
 }
