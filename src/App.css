@@ -1,5 +1,60 @@
+.app {
+    min-height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, #818E9B, #EBCEB4);
+}
+
 .input::-webkit-input-placeholder {
     font-size: 18px;
     font-weight: 500;
     color: rgb(250,250,250,0.5);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 30px 10px 10px;
+}
+.navbar_svg {
+    width: 100px;
+    height: 100px;
+}
+.navbar_menu {
+    display: flex;
+    align-items: center;
+}
+.navbar_link {
+    color: white;
+    text-decoration: none;
+}
+.navbar_link:hover {
+    border-bottom: 2px solid white;
+    margin-bottom: -2px;
+}
+
+/* Home */
+.home_bucket {
+    background-color: rgb(250,250,250,0.2);
+    height: calc(100vh - 20vh);
+    margin-right: 20px;
+}
+.home_title {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(250,250,250,0.2);
+}
+
+/* Footer  */
+.footer {
+    float: right;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
 }
