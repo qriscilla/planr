@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../logo.svg';
+import logo from '../../img/logoB3ACA7.svg';
 import Grid from '@material-ui/core/Grid';
 
 const container = {
@@ -13,9 +13,6 @@ const svg = {
     width: '200px',
     height: '200px'
 }
-const bold = {
-    fontWeight: '900'
-}
 const input = {
     backgroundColor: 'rgb(250,250,250,0.2)',
     border: 'none',
@@ -23,17 +20,17 @@ const input = {
     width: '310px',
     height: '40px',
     color: 'white',
-    fontSize: '20px',
+    fontSize: '18px',
+    fontWeight: '500',
     marginTop: '15px',
     paddingLeft: '10px'
 }
 const btn = {
     marginTop: '15px',
-    textTransform: 'uppercase',
     border: 'none',
     backgroundColor: 'white',
     color: '#CABAAD',
-    fontWeight: '600',
+    fontWeight: '900',
     fontSize: '18px',
     width: '320px',
     height: '40px',
@@ -47,7 +44,7 @@ function LogIn() {
             <Grid item>
                 <ul style={{listStyleType:'none'}}>
                     <li><img src={logo} alt={logo} style={svg} /></li>
-                    <li><span style={bold}>LOG IN</span> or SIGN UP to start planning.</li>
+                    <li><span style={{fontWeight:'900'}}>LOG IN</span> or SIGN UP to start planning.</li>
                     <li><input type='email' style={input} className='input' placeholder='email' /></li>
                     <li><input type='password' style={input} className='input' placeholder='password' /></li>
                     <li><button style={btn}>LOG IN</button></li>
