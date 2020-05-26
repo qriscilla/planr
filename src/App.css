@@ -70,14 +70,52 @@
     list-style-type: none;
 }
 .home_ul li {
-    /* margin-left: -10px; */
-    line-height: 50px;
+    margin-top: -10px;
+    margin-left: -20px;
+    line-height: 55px;
 }
 .home_span {
     background-color: rgb(250,250,250,0.2);
     border-radius: 13px;
     padding: 7px;
     cursor: grab;
+}
+
+/* Configure */
+.configure_bucket {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(250,250,250,0.2);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: grab;
+}
+.configure_input {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(250,250,250,0.2);
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    outline: none;
+    text-transform: uppercase;
+}
+.configure_btn {
+    border-radius: 50px;
+    border: none;
+    color: #B3ACA7;
+    font-weight: 900;
+    font-size: 30px;
+    margin-left: -20px;
+    padding-bottom: 5px;
+    cursor: pointer;
 }
 
 /* Footer  */
