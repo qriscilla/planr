@@ -1,52 +1,128 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 
-function Home() {
+class Home extends Component {
+    state = {
+        tasks: [
+            {name: 'Finish planr. UI',category:"wip"},
+            {name: 'Find an apt in Chicago', category:"wip"},
+            {name: 'Read Pachinko', category:"complete"}
+          ]
+    }
 
-    return (
-        <div>
+    onDragStart = (ev, id) => {
+        console.log('dragstart:',id);
+        ev.dataTransfer.setData("id", id);
+    }
 
-            <Navbar />
+    onDragOver = (ev) => {
+        ev.preventDefault();
+    }
 
-            <div className='home'>
+    onDrop = (ev, cat) => {
+       let id = ev.dataTransfer.getData("id");
+       
+       let tasks = this.state.tasks.filter((task) => {
+           if (task.name === id) {
+               task.category = cat;
+           }
+           return task;
+       });
 
-                <section className="home_buckets">
+       this.setState({
+           ...this.state,
+           tasks
+       });
+    }
 
-                    <div className="home_bucket">
-                        <div className='home_title'>TO DO</div>
-                        <ul className='home_ul'>
-                            <li><span className='home_span'>Finish planr. UI</span></li>
-                            <li><span className='home_span'>Find an apt in Chicago</span></li>
-                        </ul>
-                    </div>
-                    <div class="home_bucket">
-                        <div className='home_title'>IN PROGRESS</div>
-                        <ul className='home_ul'>
-                            <li><span className='home_span'>Read Pachinko</span></li>
-                        </ul>
-                    </div>
-                    <div class="home_bucket">
-                        <div className='home_title'>COMPLETED</div>
-                    </div>
-                    <div class="home_bucket">
-                        <div className='home_title'>TO DO</div>
-                    </div>
-                    <div class="home_bucket">
-                        <div className='home_title'>TO DO</div>
-                    </div>
-                    <div class="home_bucket">
-                        <div className='home_title'>TO DO</div>
-                    </div>
+    render() {
+        var tasks = {
+            wip: [],
+            inProgress: [],
+            complete: []
+        }
 
-                </section>
+        this.state.tasks.forEach ((t) => {
+            tasks[t.category].push(
+                <li style={{marginTop:'30px',marginLeft: '20px',listStyleType:'none'}}>
+                    <span key={t.name} 
+                        onDragStart = {(e) => this.onDragStart(e, t.name)}
+                        draggable
+                        className="home_draggable"
+                        style = {{backgroundColor: t.bgcolor}}
+                    >
+                        {t.name}
+                    </span>                    
+                </li>
+            );
+        });
+
+        return (
+            <div>
+
+                <Navbar />
+
+                <div className='home'>
+
+                    <section className="home_buckets">
+
+                        <div 
+                            className="home_bucket"
+                            onDragOver={(e)=>this.onDragOver(e)}
+                            onDrop={(e)=>{this.onDrop(e, "wip")}}
+                        >
+
+                            <div className='home_title'>TO DO</div>
+                            {tasks.wip}
+                        </div>
+
+                        <div 
+                            className="home_bucket"
+                            onDragOver={(e)=>this.onDragOver(e)}
+                            onDrop={(e)=>this.onDrop(e, "complete")}
+                        >
+
+                            <div className='home_title'>IN PROGRESS</div>
+                            {tasks.complete}
+                        </div>
+
+                        <div 
+                            className="home_bucket"
+                            onDragOver={(e)=>this.onDragOver(e)}
+                            onDrop={(e)=>this.onDrop(e, "complete")}
+                        >
+                            <div className='home_title'>IN PROGRESS</div>
+                            {tasks.complete}
+                        </div>
+
+                        <div 
+                            className="home_bucket"
+                            onDragOver={(e)=>this.onDragOver(e)}
+                            onDrop={(e)=>this.onDrop(e, "complete")}
+                        >
+                            <div className='home_title'>IN PROGRESS</div>
+                            {tasks.complete}
+                        </div>
+
+                        <div 
+                            className="home_bucket"
+                            onDragOver={(e)=>this.onDragOver(e)}
+                            onDrop={(e)=>this.onDrop(e, "complete")}
+                        >
+                            <div className='home_title'>IN PROGRESS</div>
+                            {tasks.complete}
+                        </div>
+                                            
+                    </section>
+                   
+                </div>
+
+                <Footer />
 
             </div>
-
-            <Footer />
-
-        </div>
-    )
+        );
+    }
 }
 
 export default Home;
