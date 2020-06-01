@@ -42,14 +42,14 @@ function SignUp() {
     return (
         <Grid container direction='column' alignItems='center' justify='center' style={container}>
             <Grid item>
-                <ul style={{listStyleType:'none'}}>
+                <ul style={{listStyleType:'none',padding:'0'}}>
                     <li><img src={logo} alt={logo} style={svg} /></li>
                     <li>LOG IN or <span style={{fontWeight:'900'}}>SIGN UP</span> to start planning.</li>
-                    <li><input type='text' style={input} className='input' placeholder='name' /></li>
-                    <li><input type='email' style={input} className='input' placeholder='email' /></li>
-                    <li><input type='password' style={input} className='input' placeholder='password' /></li>
-                    <li><input type='password' style={input} className='input' placeholder='confirm password' /></li>
-                    <li><button style={btn}>SIGN UP</button></li>
+                    <li><input type='text' style={input} className='auth_input' placeholder='name' /></li>
+                    <li><input type='email' style={input} className='auth_input' placeholder='email' /></li>
+                    <li><input type='password' style={input} className='auth_input' placeholder='password' /></li>
+                    <li><input type='password' style={input} className='auth_input' placeholder='confirm password' /></li>
+                    <li><button style={btn} className='auth_btn'>SIGN UP</button></li>
                 </ul>  
             </Grid>   
         </Grid>    

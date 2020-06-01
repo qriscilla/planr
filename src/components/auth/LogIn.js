@@ -35,19 +35,19 @@ const btn = {
     width: '320px',
     height: '40px',
     outline: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
 }
 
 function LogIn() {
     return (
         <Grid container direction='column' alignItems='center' justify='center' style={container}>
             <Grid item>
-                <ul style={{listStyleType:'none'}}>
+                <ul style={{listStyleType:'none',padding:'0'}}>
                     <li><img src={logo} alt={logo} style={svg} /></li>
                     <li><span style={{fontWeight:'900'}}>LOG IN</span> or SIGN UP to start planning.</li>
-                    <li><input type='email' style={input} className='input' placeholder='email' /></li>
-                    <li><input type='password' style={input} className='input' placeholder='password' /></li>
-                    <li><button style={btn}>LOG IN</button></li>
+                    <li><input type='email' style={input} className='auth_input' placeholder='email' /></li>
+                    <li><input type='password' style={input} className='auth_input' placeholder='password' /></li>
+                    <li><button style={btn} className='auth_btn'>LOG IN</button></li>
                 </ul>  
             </Grid>   
         </Grid>    
