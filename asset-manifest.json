@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/planr/static/css/main.c6500ba7.chunk.css",
+    "main.js": "/planr/static/js/main.bb8936af.chunk.js",
+    "main.js.map": "/planr/static/js/main.bb8936af.chunk.js.map",
+    "runtime-main.js": "/planr/static/js/runtime-main.e1d75e34.js",
+    "runtime-main.js.map": "/planr/static/js/runtime-main.e1d75e34.js.map",
+    "static/js/2.8824c992.chunk.js": "/planr/static/js/2.8824c992.chunk.js",
+    "static/js/2.8824c992.chunk.js.map": "/planr/static/js/2.8824c992.chunk.js.map",
+    "index.html": "/planr/index.html",
+    "precache-manifest.e089d38113b55baba00c75f9f52839a0.js": "/planr/precache-manifest.e089d38113b55baba00c75f9f52839a0.js",
+    "service-worker.js": "/planr/service-worker.js",
+    "static/css/main.c6500ba7.chunk.css.map": "/planr/static/css/main.c6500ba7.chunk.css.map",
+    "static/js/2.8824c992.chunk.js.LICENSE.txt": "/planr/static/js/2.8824c992.chunk.js.LICENSE.txt",
+    "static/media/logo84909C.svg": "/planr/static/media/logo84909C.825956f7.svg",
+    "static/media/logoB3ACA7.svg": "/planr/static/media/logoB3ACA7.a488cdc5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1d75e34.js",
+    "static/js/2.8824c992.chunk.js",
+    "static/css/main.c6500ba7.chunk.css",
+    "static/js/main.bb8936af.chunk.js"
+  ]
+}
